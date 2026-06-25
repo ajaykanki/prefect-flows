@@ -8,7 +8,7 @@ requires-python = ">=3.14"
 dependencies = [
     "prefect>=3.7.5",
     "pydantic[email]>=2.13.4",
-    "rpacore==0.1.2a1",
+    "rpacore==0.1.2a3",
 ]
 
 [project.scripts]

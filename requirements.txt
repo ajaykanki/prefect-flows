@@ -174,6 +174,10 @@ prometheus-client==0.25.0
     # via
     #   prefect
     #   pydocket
+psycopg==3.3.4
+    # via rpacore
+psycopg-binary==3.3.4 ; implementation_name != 'pypy'
+    # via psycopg
 py-key-value-aio==0.4.5
     # via pydocket
 pycparser==3.0 ; implementation_name != 'PyPy' and platform_python_implementation != 'PyPy'
@@ -252,7 +256,7 @@ rich==15.0.0
     #   typer
 rich-rst==2.0.1
     # via cyclopts
-rpacore==0.1.2a1
+rpacore==0.1.2a3
     # via prefect-flows
 rpds-py==2026.5.1
     # via
@@ -309,6 +313,7 @@ typing-inspection==0.4.2
 tzdata==2026.2 ; sys_platform == 'win32'
     # via
     #   apprise
+    #   psycopg
     #   pydocket
     #   tzlocal
     #   whenever
