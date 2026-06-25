@@ -7,6 +7,7 @@ pull:
   - prefect.deployments.steps.run_shell_script:
       env:
         UV_INDEX_WTSL_PASSWWORD: "{{prefect.blocks.secret.azure-devops-pat}}"
+        PREFECT_API_AUTH_STRING: "{{prefect.blocks.secret.prefect-api-auth}}"
       script: |
           uv sync --system-certs
       expand_env_vars: true
