@@ -1,0 +1,19 @@
+pull:
+  - prefect.deployments.steps.git_clone:
+      id: git-clone
+      repository: https://github.com/ajaykanki/prefect-flows.git
+  - prefect.deployments.steps.set_working_directory:
+      directory: "{{ git-clone.directory }}"
+  - prefect.deployments.steps.run_shell_script:
+      env:
+        INDEX_URL: "{{prefect.blocks.secret.wtsl-index}}"
+      script: |
+          uv pip install -r requirements.txt --index $INDEX_URL --index-strategy unsafe-best-match
+      expand_env_vars: true
+
+deployments:
+  - name: deployment-4
+    entrypoint: src/prefect_flows/template_flow/main.py:hello_world
+    work_pool:
+      name: process-pool
+

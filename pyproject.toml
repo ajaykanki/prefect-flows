@@ -1,0 +1,27 @@
+[project]
+name = "prefect-flows"
+version = "0.1.0"
+description = "Automation Workflows"
+readme = "README.md"
+authors = [{ name = "ajay_kanki", email = "ajay_kanki@welspun.com" }]
+requires-python = ">=3.14"
+dependencies = [
+    "prefect>=3.7.5",
+    "pydantic[email]>=2.13.4",
+    "rpacore==0.1.2a1",
+]
+
+[project.scripts]
+serve = "prefect_flows:main"
+
+[tool.uv.sources]
+rpacore = { index = "wtsl" }
+
+[[tool.uv.index]]
+name = "wtsl"
+url = "https://pkgs.dev.azure.com/WTSL/bps-automations-workspace/_packaging/prefect-rpa-framework/pypi/simple/"
+explicit = true
+
+[build-system]
+requires = ["uv_build>=0.11.23,<0.12.0"]
+build-backend = "uv_build"
