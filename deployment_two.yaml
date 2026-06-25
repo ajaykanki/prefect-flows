@@ -14,8 +14,8 @@ pull:
       expand_env_vars: true
 
 deployments:
-  - name: deployment-4
+  - name: deployment-2
     entrypoint: src/prefect_flows/template_flow/main.py:hello_world
     work_pool:
-      name: process-pool
+      name: wtsl_automations-docker
 
