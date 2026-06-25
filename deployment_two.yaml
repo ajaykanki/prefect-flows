@@ -6,9 +6,10 @@ pull:
       directory: "{{ git-clone.directory }}"
   - prefect.deployments.steps.run_shell_script:
       env:
-        INDEX_URL: "{{prefect.blocks.secret.wtsl-index}}"
+        INDEX_URL: "{{prefect.blocks.secret.azure-artifacts-pypi-url}}"
+        AZURE_PAT: "{{prefect.blocks.secret.azure-devops-pat}}"
       script: |
-          uv pip install -r requirements.txt --index $INDEX_URL --index-strategy unsafe-best-match
+          uv pip install -r requirements.txt --index https://$AZURE_PAT@$INDEX_URL --index-strategy unsafe-best-match
       expand_env_vars: true
 
 deployments:
