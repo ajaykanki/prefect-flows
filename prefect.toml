@@ -1,5 +1,5 @@
 home = "./.prefect"
-api.url = "http://localhost:4200/api"
+api.url = "http://dtwtslahm09hk.welspungrp.com:4200/api"
 
 [logging]
 level = "DEBUG"
