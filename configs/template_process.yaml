@@ -1,0 +1,84 @@
+environment: "DEV"
+# ─────────────────────────────────────────────────────────────
+# Process Information (Required)
+# ────────────────────────────────────────────────────────────
+process:
+  name: "Process Name"
+  description: "Brief Description of the Process"
+  department: "Department"
+  function: "O2C"
+  owner: "Process Owner"
+  owner_email: "process_owner@company.com"
+
+master_task:
+  name: "Template Master Task"
+  description: "Flow Description"
+  criticality: "HIGH"
+  complexity: "VERY HIGH"
+  client_name: "Customer Name"
+  avg_manual_time_seconds: 2100
+  avg_monthly_fte_cost: 66666
+  target_stp_rate: 90
+  trigger_type: "Scheduled"
+  status: "UAT"
+  sla_in_minutes: 360
+  created_by: "Developer Name"
+  version: "1.0"
+  tags: ["soc", "kohls", "towels", "rugs", "bathrobe"]
+
+# ─────────────────────────────────────────────────────────────
+# Path Settings
+# All other paths must be relative to base_working_dir
+# ─────────────────────────────────────────────────────────────
+paths:
+  base_working_dir: "Z:/WorkingDir"
+  input_dir: "Z:/WorkingDir/input"
+  output_dir: "Z:/WorkingDir/output"
+  log_dir: "Z:/WorkingDir/logs"
+  archive_dir: "Z:/WorkingDir/archive"
+
+# ─────────────────────────────────────────────────────────────
+# Notification Settings
+# Supports: SMTP Email and MS Teams Channel Webhook
+# Configure notification channels per event
+# ─────────────────────────────────────────────────────────────
+notifications:
+  on_business_exception:
+    - type: "email"
+      enabled: true
+      block_name: "default-smtp"
+      to_recipients: ["user1@company"]
+      cc_recipients: ["user2@company.com"]
+      default_sender: noreply@company.com
+    - type: "ms-teams"
+      enabled: "false"
+      block_name: "default-ms-teams"
+  on_failure:
+    - type: "email"
+      enabled: true
+      block_name: "default-smtp"
+      to_recipients: ["user1@company.com"]
+      cc_recipients: ["user2@company.com"]
+      default_sender: noreply@company.com
+    - type: "ms-teams"
+      enabled: true
+      block_name: "default-ms-teams"
+  on_success:
+    - type: "email"
+      enabled: true
+      block_name: "default-smtp"
+      to_recipients: ["user1@company.com"]
+      cc_recipients: ["user2@company.com"]
+      default_sender: noreply@company.com
+  on_running:
+    - type: "email"
+      enabled: true
+      block_name: "default-smtp"
+      to_recipients: ["user1@company.com"]
+      cc_recipients: ["user2@company.com"]
+      default_sender: noreply@company.com
+# ─────────────────────────────────────────────────────────────
+# Cleanup Settings
+# Provide a lsit of applications/process names to kill before execution
+# ─────────────────────────────────────────────────────────────
+cleanup_applications: ["chrome", "outlook"]

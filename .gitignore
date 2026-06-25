@@ -15,4 +15,3 @@ wheels/
 
 # Configuration containing sensitive credentials
 config.yaml
-configs/

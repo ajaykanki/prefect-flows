@@ -11,7 +11,7 @@ def fetch_batch():
 
 
 @workflow(
-    config_path=r"C:\Users\fnx\Desktop\kohls_export_so_creation.yaml",
+    config_path=r"configs\kohls_export_so_creation.yaml",
 )
 def hello_world(config: WorkflowConfig):
     fetch_batch()
