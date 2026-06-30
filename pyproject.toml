@@ -5,7 +5,7 @@ description = "Automation Workflows"
 readme = "README.md"
 authors = [{ name = "ajay_kanki", email = "ajay_kanki@welspun.com" }]
 requires-python = ">=3.12"
-dependencies = ["prefect>=3.7.5", "pydantic[email]>=2.13.4", "rpacore==0.1.2a3"]
+dependencies = ["prefect>=3.7.5", "pydantic[email]>=2.13.4", "rpacore>=0.1.2a4"]
 
 [project.scripts]
 serve = "prefect_flows:main"

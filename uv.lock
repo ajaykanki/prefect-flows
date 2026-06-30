@@ -1153,7 +1153,7 @@ dependencies = [
 requires-dist = [
     { name = "prefect", specifier = ">=3.7.5" },
     { name = "pydantic", extras = ["email"], specifier = ">=2.13.4" },
-    { name = "rpacore", specifier = "==0.1.2a3", index = "https://pkgs.dev.azure.com/WTSL/bps-automations-workspace/_packaging/prefect-rpa-framework/pypi/simple/" },
+    { name = "rpacore", specifier = ">=0.1.2a4", index = "https://pkgs.dev.azure.com/WTSL/bps-automations-workspace/_packaging/prefect-rpa-framework/pypi/simple/" },
 ]
 
 [[package]]
@@ -1712,7 +1712,7 @@ wheels = [
 
 [[package]]
 name = "rpacore"
-version = "0.1.2a3"
+version = "0.1.2a4"
 source = { registry = "https://pkgs.dev.azure.com/WTSL/bps-automations-workspace/_packaging/prefect-rpa-framework/pypi/simple/" }
 dependencies = [
     { name = "prefect", extra = ["email"] },
@@ -1720,9 +1720,9 @@ dependencies = [
     { name = "pydantic", extra = ["email"] },
     { name = "pydantic-settings" },
 ]
-sdist = { url = "https://pkgs.dev.azure.com/WTSL/440b30cc-95a9-4c0d-bf7a-a3248ee75d82/_packaging/b45adaa6-7271-4b63-8105-b5d1c4dfa31f/pypi/download/rpacore/0.1.2a3/rpacore-0.1.2a3.tar.gz", hash = "sha256:fa340591932b87780f0060805c1d64e79013ec141fc8dac89caeaa45841d3c59" }
+sdist = { url = "https://pkgs.dev.azure.com/WTSL/440b30cc-95a9-4c0d-bf7a-a3248ee75d82/_packaging/b45adaa6-7271-4b63-8105-b5d1c4dfa31f/pypi/download/rpacore/0.1.2a4/rpacore-0.1.2a4.tar.gz", hash = "sha256:dc245429c7ea1ea1fe722334d2ca10517889a86292d82cdca4dad401d9c1be9d" }
 wheels = [
-    { url = "https://pkgs.dev.azure.com/WTSL/440b30cc-95a9-4c0d-bf7a-a3248ee75d82/_packaging/b45adaa6-7271-4b63-8105-b5d1c4dfa31f/pypi/download/rpacore/0.1.2a3/rpacore-0.1.2a3-py3-none-any.whl", hash = "sha256:57b79d968d333de70060875341ce9d3dab87989c4a1aedfa9212ed5ece6450a8" },
+    { url = "https://pkgs.dev.azure.com/WTSL/440b30cc-95a9-4c0d-bf7a-a3248ee75d82/_packaging/b45adaa6-7271-4b63-8105-b5d1c4dfa31f/pypi/download/rpacore/0.1.2a4/rpacore-0.1.2a4-py3-none-any.whl", hash = "sha256:323d2c6fa89bf54efe07ef9dc5ca7f8409bdbcab8e135c185e071771fd01a54e" },
 ]
 
 [[package]]
