@@ -161,6 +161,8 @@ packaging==26.2
     # via prefect
 pathspec==1.1.1
     # via prefect
+pendulum==3.2.0 ; python_full_version < '3.13'
+    # via prefect
 pluggy==1.6.0
     # via prefect
 prefect==3.7.5
@@ -209,6 +211,7 @@ pygments==2.20.0
 python-dateutil==2.9.0.post0
     # via
     #   dateparser
+    #   pendulum
     #   prefect
 python-dotenv==1.2.2
     # via pydantic-settings
@@ -256,7 +259,7 @@ rich==15.0.0
     #   typer
 rich-rst==2.0.1
     # via cyclopts
-rpacore==0.1.2a3
+rpacore==0.1.2a4
     # via prefect-flows
 rpds-py==2026.5.1
     # via
@@ -295,24 +298,30 @@ typer==0.26.7
 typing-extensions==4.15.0
     # via
     #   alembic
+    #   anyio
+    #   exceptiongroup
     #   fastapi
     #   opentelemetry-api
     #   prefect
+    #   psycopg
     #   py-key-value-aio
     #   pydantic
     #   pydantic-core
     #   pydantic-extra-types
     #   pydocket
+    #   referencing
     #   sqlalchemy
+    #   starlette
     #   typing-inspection
 typing-inspection==0.4.2
     # via
     #   fastapi
     #   pydantic
     #   pydantic-settings
-tzdata==2026.2 ; sys_platform == 'win32'
+tzdata==2026.2 ; python_full_version < '3.13' or sys_platform == 'win32'
     # via
     #   apprise
+    #   pendulum
     #   psycopg
     #   pydocket
     #   tzlocal
@@ -331,5 +340,5 @@ uvicorn==0.49.0
     # via prefect
 websockets==16.0
     # via prefect
-whenever==0.10.0
+whenever==0.10.0 ; python_full_version >= '3.13'
     # via prefect

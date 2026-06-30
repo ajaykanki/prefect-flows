@@ -10,7 +10,7 @@ pull:
         AZURE_PAT: "{{prefect.blocks.secret.azure-devops-pat}}"
         PREFECT_API_AUTH_STRING: "{{prefect.blocks.secret.prefect-api-auth}}"
       script: |
-          uv pip install -r requirements.txt --index https://$AZURE_PAT@$INDEX_URL --index-strategy unsafe-best-match
+          uv pip install -r pyproject.toml --index https://$AZURE_PAT@$INDEX_URL --index-strategy unsafe-best-match
       expand_env_vars: true
 
 deployments:
