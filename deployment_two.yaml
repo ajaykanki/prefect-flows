@@ -17,5 +17,9 @@ deployments:
   - name: deployment-2
     entrypoint: src/prefect_flows/template_flow/main.py:hello_world
     work_pool:
+      name: wtsl_automations-process
+  - name: deployment-4
+    entrypoint: src/prefect_flows/template_flow/main.py:hello_world
+    work_pool:
       name: wtsl_automations-docker
 
